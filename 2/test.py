@@ -1,15 +1,16 @@
 import unittest
+from main import BMI, BMI_category
 
 class test_BMI_value(unittest.TestCase):
     def test_BMI_value(self):
-        BMI = BMI("5 10", 150)
-        self.assertEqual(BMI, 21.5)
+        bmi = BMI("5,10", 150)
+        self.assertEqual(bmi, 22)
 
-        BMI = BMI("6 0", 200)
-        self.assertEqual(BMI, 27.1)
+        bmi = BMI("6,0", 200)
+        self.assertEqual(bmi, 27.8)
 
-        BMI = BMI("5 5", 120)
-        self.assertEqual(BMI, 20.0)
+        bmi = BMI("5,5", 120)
+        self.assertEqual(bmi, 20.4)
 
 class test_BMI_category(unittest.TestCase):
     def test_BMI_category(self):
